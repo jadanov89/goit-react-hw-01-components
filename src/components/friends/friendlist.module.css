@@ -1,0 +1,35 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    border-radius: 5px;
+    list-style: none;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    background-color: white;
+    -webkit-box-shadow: 2px 4px 13px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 13px -1px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 13px -1px rgba(0,0,0,0.75);
+}
+
+.avatar {
+    border-radius: 5%;
+    width: 60px;
+}
+
+
+.name {
+    font-size: 26px;
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .online {
+    background-color: green;
+  }

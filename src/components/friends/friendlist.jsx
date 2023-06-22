@@ -5,15 +5,15 @@ const FriendList = (
     {friends}
 ) => {
     return (
-        <ul  className={styles.friend_list}>
-            {friends.map(friend => (
-            <li className={styles.item} key={friend.id}>
-                <span className={ friend.isOnline ? styles.statusOnline : styles.statusOffline }>{friend.isOnline}</span>
-                <img className={styles.avatar} src={friend.avatar} alt="User avatar" width="48" />
-                <p className={styles.name}>{friend.name }</p>
-            </li>
-            ))}
-        </ul>
+        <ul className={styles.friend_list}>
+        {friends.map((friend) => (
+          <li className={styles.item} key={friend.id}>
+            <span className={`${styles.status} ${friend.isOnline ? styles.online : ''}`} />
+            <img className={styles.avatar} src={friend.avatar} alt="User avatar" width="48" />
+            <p className={styles.name}>{friend.name}</p>
+          </li>
+        ))}
+      </ul>
     );
 }
 
