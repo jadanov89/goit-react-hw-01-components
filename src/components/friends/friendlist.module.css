@@ -1,3 +1,7 @@
+.friend_list {
+    margin-bottom: 15px;
+}
+
 .item{
     display: flex;
     flex-direction: row;
