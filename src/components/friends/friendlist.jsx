@@ -18,16 +18,32 @@ import FriendListItem from './FriendListItem'
 //     );
 // }
 
-
-const FriendList = (
-  {friends}
-) => {
+const FriendList = ({ friends }) => {
   return (
-      <ul className={styles.friend_list}>
-      {friends.map(FriendListItem)}
+    <ul className={styles.friend_list}>
+      {friends.map((friend) => (
+        <FriendListItem
+          key={friend.id}
+          id={friend.id}
+          name={friend.name}
+          avatar={friend.avatar}
+          isOnline={friend.isOnline}
+        />
+      ))}
     </ul>
   );
-}
+};
+
+
+// const FriendList = (
+//   {friends}
+// ) => {
+//   return (
+//       <ul className={styles.friend_list}>
+//       {friends.map(FriendListItem)}
+//     </ul>
+//   );
+// }
 
 // FriendList.propTypes = {
 //     friends: PropTypes.arrayOf(
