@@ -3,7 +3,7 @@ import styles from './transactionHistory.module.css';
 import TransactionHistoryItem from './TransactionHistoryItem'
 
 
-const TransactionHistory = ({ transaction, items}) => {
+const TransactionHistory = ({ transaction }) => {
     return (
         <table className={styles.transaction_history}>
             <thead>
@@ -15,7 +15,7 @@ const TransactionHistory = ({ transaction, items}) => {
             </thead>
 
               <tbody>    
-                {items.map(TransactionHistoryItem)}
+                {transaction.map(TransactionHistoryItem)}
             </tbody>
           </table>
     );
@@ -23,7 +23,7 @@ const TransactionHistory = ({ transaction, items}) => {
 
 
 TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
+  transaction: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default TransactionHistory;
